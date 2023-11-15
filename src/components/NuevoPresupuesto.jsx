@@ -1,13 +1,15 @@
-export const NuevoPresupuesto = () => {
+export const NuevoPresupuesto = ({ presupuesto, setPresupuesto }) => {
   return (
     <div className="contenedor-presupuesto contenedor sombra">
       <form className="formulario">
         <div className="campo">
-          <label htmlFor="">Definir Presupuesto</label>
+          <label>Definir Presupuesto</label>
           <input
             type="text"
             className="nuevo-presupuesto"
             placeholder="Añade tu presupuesto"
+            value={presupuesto}
+            onChange={(e) => setPresupuesto(e.target.value)}
           />
           <input type="submit" value="Añadir" />
         </div>
