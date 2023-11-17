@@ -42,8 +42,10 @@ export const ControlPresupuesto = ({ gastos, presupuesto }) => {
           styles={buildStyles({
             pathColor: "#3B82F6",
             trailColor: "#F5F5F5",
+            textColor: "#3B82F6",
           })}
           value={porcentaje}
+          text={`${porcentaje}% Gastado`}
         />
       </div>
       <div className="contenido-presupuesto">
