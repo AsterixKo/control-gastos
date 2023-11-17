@@ -18,13 +18,17 @@ function App() {
 
   useEffect(() => {
     if (Object.keys(gastoEditar).length > 0) {
-      console.log("gasto editar tiene algo");
-      handleNuevoGasto();
+      setModal(true);
+
+      setTimeout(() => {
+        setAnimarModal(true);
+      }, 500);
     }
   }, [gastoEditar]);
 
   const handleNuevoGasto = () => {
     setModal(true);
+    setGastoEditar({});
 
     setTimeout(() => {
       setAnimarModal(true);
@@ -73,6 +77,7 @@ function App() {
           animarModal={animarModal}
           setAnimarModal={setAnimarModal}
           guardarGasto={guardarGasto}
+          gastoEditar={gastoEditar}
         />
       )}
     </div>
