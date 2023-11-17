@@ -9,7 +9,9 @@ export const ControlPresupuesto = ({ gastos, presupuesto }) => {
       (total, gasto) => gasto.cantidad + total,
       0
     );
-    console.log(totalGastado);
+    const totalDisponible = presupuesto - totalGastado;
+
+    setDisponible(totalDisponible);
     setGastado(totalGastado);
   }, [gastos]);
 
